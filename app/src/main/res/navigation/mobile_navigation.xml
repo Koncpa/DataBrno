@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.pkoncity.projektx.ui.general.GeneralFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_general" />
+
+    <fragment
+        android:id="@+id/nav_birthness"
+        android:name="com.pkoncity.projektx.ui.birthness.QuizFragment"
+        android:label="@string/menu_birthness"
+        tools:layout="@layout/fragment_birthness" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.pkoncity.projektx.ui.age.AgeFragment"
+        android:label="@string/menu_age_structure"
+        tools:layout="@layout/fragment_age" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.pkoncity.projektx.ui.foreigners.ForeignersFragment"
+        android:label="@string/menu_foreigners"
+        tools:layout="@layout/fragment_foreigners" />
+
+    <fragment
+        android:id="@+id/nav_generalDemo"
+        android:name="com.pkoncity.projektx.ui.GeneralDemo.GeneralDemo"
+        android:label="@string/menu_generalDemo"
+        tools:layout="@layout/fragment_demography" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.pkoncity.projektx.ui.infoapp.InfoAppFragment"
+        android:label="@string/menu_appinfo"
+        tools:layout="@layout/fragment_infoapp" />
+
+    <fragment
+        android:id="@+id/nav_quiz"
+        android:name="com.pkoncity.projektx.ui.birthness.QuizFragment"
+        android:label="@string/menu_quiz"
+        tools:layout="@layout/fragment_quiz" />
+</navigation>

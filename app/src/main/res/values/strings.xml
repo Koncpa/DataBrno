@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Brno v datech</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Brno v datech</string>
+    <string name="nav_header_desc">Navigační lišta</string>
+
+    <string name="menu_home">Úvod</string>
+    <string name="menu_birthness">Porodnost</string>
+    <string name="menu_age_structure">Věková struktura</string>
+    <string name="menu_foreigners">Cizinci v Brně</string>
+    <string name="menu_generalDemo">Obecná demografie</string>
+    <string name="menu_appinfo">Informace o aplikaci</string>
+    <string name="menu_quiz">Kvíz</string>
+</resources>

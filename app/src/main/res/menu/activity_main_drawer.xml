@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_generalDemo"
+            android:icon="@drawable/ic_demo"
+            android:title="@string/menu_generalDemo" />
+        <item
+            android:id="@+id/nav_birthness"
+            android:icon="@drawable/ic_birthness"
+            android:title="@string/menu_birthness" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_age"
+            android:title="@string/menu_age_structure" />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_foreigners"
+            android:title="@string/menu_foreigners" />
+        <item
+            android:id="@+id/nav_quiz"
+            android:icon="@drawable/ic_quiz"
+            android:title="@string/menu_quiz" />
+    </group>
+
+    <item android:title="Další údaje">
+        <menu>
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_info"
+                android:title="@string/menu_appinfo" />
+        </menu>
+    </item>
+
+</menu>
