@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292930"
+    tools:context=".ui.foreigners.ForeignersEvolutionTable">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="372dp"
+        android:layout_height="476dp"
+        android:background="#292930"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <HorizontalScrollView
+            android:id="@+id/hscrll1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/table_forEvo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="78dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#292930"
+                            android:gravity="center"
+                            android:text="@string/year"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="109dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#292930"
+                            android:gravity="center"
+                            android:text="@string/foreignersEvoCity"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#292930"
+                            android:gravity="center"
+                            android:text="@string/foreignersEvoCountrySide"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </RelativeLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/text_ForEvoLegend"
+        android:layout_width="324dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="17dp"
+        android:clickable="false"
+        android:gravity="center"
+        android:text="@string/legendBirthness"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView1" />
+
+    <TextView
+        android:id="@+id/text_ItemForEvo"
+        android:layout_width="321dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="12dp"
+        android:clickable="false"
+        android:text="@string/legendForEvo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_ForEvoLegend" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

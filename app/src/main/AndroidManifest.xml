@@ -1,17 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pkoncity.projektx">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pkoncity.BrnoData">
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="com.pkoncity.BrnoData.ui.home.OpenDataUrl"
+            android:label="@string/openDataSada"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            ></activity>
+        <activity android:name="com.pkoncity.BrnoData.ui.home.OpenDataInfo"
+            android:label="@string/openDataTitle"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name="com.pkoncity.BrnoData.ui.quiz.QuizInfo"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name="com.pkoncity.BrnoData.ui.quiz.QuestionsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name="com.pkoncity.BrnoData.ui.generalDemo.UnemploymentGraph"
+            android:label="@string/unenmGraph"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.generalDemo.HumanDensityGraph"
+            android:label="@string/HumDensityGraph"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.generalDemo.CitizenCountGraph"
+            android:label="@string/citCountBrnoGraph"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.generalDemo.UnemploymentTable"
+            android:label="@string/unenmTable"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.generalDemo.HumanDensityTable"
+            android:label="@string/humDensityTable"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.generalDemo.CitizenCountTable"
+            android:label="@string/citCountBrnoTable"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.age.AgeStructureGraph"
+            android:label="@string/ageStructureGraph"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.age.AgeIndexGraph"
+            android:label="@string/ageIndexGraph"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.age.AgeHopeGraph"
+            android:label="@string/ageHopeGraph"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.age.AgeStructureTable"
+            android:label="@string/ageStructure"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.age.AgeIndexTable"
+            android:label="@string/ageIndex"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.age.AgeHopeTable"
+            android:label="@string/ageHope"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.foreigners.ForeignersCountEvoGraph"
+            android:label="@string/foreignersCountEvoGraph"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.foreigners.ForeignersGrowthGraph"
+            android:label="@string/foreignersGrowthGraph"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.foreigners.ForeignersCountGraph"
+            android:label="@string/foreignersCountGraph"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.foreigners.ForeignersGrowthTable"
+            android:label="@string/foreignersGrowth"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.foreigners.ForeignersEvolutionTable"
+            android:label="@string/foreignersCountEvo"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.foreigners.ForeignersCountTable"
+            android:label="@string/foreignersCount"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.birthness.GraphEvoBirthness"
+            android:label="@string/evoBirthnessGraph"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.birthness.GraphDynEvo"
+            android:label="@string/dynEvoGraph"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.birthness.EvoBirthnessActivityTable"
+            android:label="@string/hrubaMiraPorodnost"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.ui.birthness.DynEvoActivityTable"
+            android:label="@string/dynamikaPopVyvoj"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.pkoncity.BrnoData.MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

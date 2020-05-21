@@ -1,0 +1,155 @@
+﻿Country;Value;Color;Legend
+Slovakia;2041;#b71c1c;1000+
+Ukraine;1204;#b71c1c;1000+
+Russia;763;#c62828;500-999
+India;347;#e53935;200-499
+Hungary;261;#e53935;200-499
+Turkey;254;#e53935;200-499
+Romania;252;#e53935;200-499
+Kazakhstan;239;#e53935;200-499
+Brazil;160;#f44336;100-199
+Japan;157;#f44336;100-199
+Greece;148;#f44336;100-199
+Bulgaria;147;#f44336;100-199
+China;143;#f44336;100-199
+Italy;143;#f44336;100-199
+United States of America;143;#f44336;100-199
+Ghana;136;#f44336;100-199
+Belarus;135;#f44336;100-199
+Egypt;132;#f44336;100-199
+Mexico;106;#f44336;100-199
+Republic of Serbia;104;#f44336;100-199
+Spain;103;#f44336;100-199
+Nepal;92;#e57373;50-99
+United Kingdom;86;#e57373;50-99
+Taiwan;76;#e57373;50-99
+Bosnia and Herzegovina;73;#e57373;50-99
+Poland;72;#e57373;50-99
+Iran;70;#e57373;50-99
+Macedonia;66;#e57373;50-99
+Portugal;64;#e57373;50-99
+Tunisia;62;#e57373;50-99
+Germany;60;#e57373;50-99
+Israel;53;#e57373;50-99
+South Korea;51;#e57373;50-99
+Thailand;46;#ef9a9a;25-49
+Albania;41;#ef9a9a;25-49
+Philippines;41;#ef9a9a;25-49
+Mongolia;40;#ef9a9a;25-49
+Indonesia;37;#ef9a9a;25-49
+Croatia;36;#ef9a9a;25-49
+Kosovo;36;#ef9a9a;25-49
+Georgia;34;#ef9a9a;25-49
+France;33;#ef9a9a;25-49
+Oman;31;#ef9a9a;25-49
+Azerbaijan;30;#ef9a9a;25-49
+Saudi Arabia;29;#ef9a9a;25-49
+Syria;29;#ef9a9a;25-49
+Nigeria;28;#ef9a9a;25-49
+Morocco;27;#ef9a9a;25-49
+Netherlands;27;#ef9a9a;25-49
+South Africa;26;#ef9a9a;25-49
+Kyrgyzstan;23;#ffcdd2;10-24
+Argentina;21;#ffcdd2;10-24
+Hong Kong;21;#ffcdd2;10-24
+Bangladesh;20;#ffcdd2;10-24
+Australia;19;#ffcdd2;10-24
+Latvia;18;#ffcdd2;10-24
+Colombia;17;#ffcdd2;10-24
+Ireland;17;#ffcdd2;10-24
+Venezuela;17;#ffcdd2;10-24
+Austria;16;#ffcdd2;10-24
+Lebanon;14;#ffcdd2;10-24
+New Zealand;14;#ffcdd2;10-24
+Norway;14;#ffcdd2;10-24
+Sweden;14;#ffcdd2;10-24
+Zimbabwe;13;#ffcdd2;10-24
+Algeria;12;#ffcdd2;10-24
+Palestine;12;#ffcdd2;10-24
+Uzbekistan;12;#ffcdd2;10-24
+Belgium;11;#ffcdd2;10-24
+Canada;11;#ffcdd2;10-24
+Kenya;11;#ffcdd2;10-24
+Montenegro;11;#ffcdd2;10-24
+Cuba;10;#ffcdd2;10-24
+Chile;10;#ffcdd2;10-24
+Malaysia;8;#ffebee;1-9
+Switzerland;8;#ffebee;1-9
+Cameroon;7;#ffebee;1-9
+Cyprus;7;#ffebee;1-9
+Jordan;7;#ffebee;1-9
+Sri Lanka;7;#ffebee;1-9
+Costa Rica;6;#ffebee;1-9
+Ethiopia;6;#ffebee;1-9
+Pakistan;6;#ffebee;1-9
+Slovenia;6;#ffebee;1-9
+Zambia;5;#ffebee;1-9
+Cambodia;4;#ffebee;1-9
+Estonia;4;#ffebee;1-9
+Finland;4;#ffebee;1-9
+Lithuania;4;#ffebee;1-9
+Mauritius;4;#ffebee;1-9
+Senegal;4;#ffebee;1-9
+Bhutan;3;#ffebee;1-9
+Dominican Republic;3;#ffebee;1-9
+Ecuador;3;#ffebee;1-9
+Ivory Coast;3;#ffebee;1-9
+Suriname;3;#ffebee;1-9
+Tanzania;3;#ffebee;1-9
+Gambia;2;#ffebee;1-9
+Honduras;2;#ffebee;1-9
+Jamaica;2;#ffebee;1-9
+Maldives;2;#ffebee;1-9
+Namibia;2;#ffebee;1-9
+Peru;2;#ffebee;1-9
+Tajikistan;2;#ffebee;1-9
+Angola;1;#ffebee;1-9
+Eritrea;1;#ffebee;1-9
+Laos;1;#ffebee;1-9
+Liberia;1;#ffebee;1-9
+Luxembourg;1;#ffebee;1-9
+Malawi;1;#ffebee;1-9
+Mozambique;1;#ffebee;1-9
+Nicaragua;1;#ffebee;1-9
+Panama;1;#ffebee;1-9
+Papua New Guinea;1;#ffebee;1-9
+South Sudan;1;#ffebee;1-9
+Togo;1;#ffebee;1-9
+United Arab Emirates;1;#ffebee;1-9
+Uruguay;1;#ffebee;1-9
+Cabo Verde;0;#9e9e9e;0
+Liechtenstein;0;#9e9e9e;0
+Macau;0;#9e9e9e;0
+Malta;0;#9e9e9e;0
+Mauritania;0;#9e9e9e;0
+Myanmar;0;#9e9e9e;0
+refugee ;0;#9e9e9e;0
+Republic of Rwanda;0;#9e9e9e;0
+Singapore;0;#9e9e9e;0
+Sudan;0;#9e9e9e;0
+Benin;-1;#c5cae9;-1-9
+Bolivia;-1;#c5cae9;-1-9
+Burkina Faso;-1;#c5cae9;-1-9
+Denmark;-1;#c5cae9;-1-9
+Guatemala;-1;#c5cae9;-1-9
+Guinea Bissau;-1;#c5cae9;-1-9
+Kuwait;-1;#c5cae9;-1-9
+Libya;-1;#c5cae9;-1-9
+Madagascar;-1;#c5cae9;-1-9
+Mali;-1;#c5cae9;-1-9
+Republic of Congo;-1;#c5cae9;-1-9
+Samoa;-1;#c5cae9;-1-9
+the republic of the Congo;-2;#c5cae9;-1-9
+Uganda;-2;#c5cae9;-1-9
+Botswana;-3;#c5cae9;-1-9
+Paraguay;-3;#c5cae9;-1-9
+Yemen;-3;#c5cae9;-1-9
+El Salvador;-4;#c5cae9;-1-9
+Guinea;-4;#c5cae9;-1-9
+Turkmenistan;-4;#c5cae9;-1-9
+Afghanistan;-5;#c5cae9;-1-9
+Iraq;-5;#c5cae9;-1-9
+Moldova;-7;#c5cae9;-1-9
+Yugoslavia;-15;#5c6bc0;-10-24
+Armenia;-36;#303f9f;-25-49
+Vietnam;-67;#283593;-50-99

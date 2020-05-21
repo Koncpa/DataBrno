@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_what_open_data"
+        android:layout_width="376dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/openDataHeader"
+        android:textColor="#000000"
+        android:textSize="38dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_description_open_data"
+        android:layout_width="340dp"
+        android:layout_height="411dp"
+        android:text="@string/OpenDataDescription"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_what_open_data" />
+
+    <Button
+        android:id="@+id/buttonNationalData"
+        android:layout_width="355dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/openDataNationalData"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:background="@drawable/side_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_description_open_data" />
+
+    <Button
+        android:id="@+id/buttonBackOpenData"
+        android:layout_width="355dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_data_back"
+        android:background="#01579B"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNationalData" />
+</androidx.constraintlayout.widget.ConstraintLayout>

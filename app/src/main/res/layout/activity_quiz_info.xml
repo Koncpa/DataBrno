@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.quiz.QuizInfo">
+
+    <Button
+        android:id="@+id/btnBackInfoQuiz"
+        android:layout_width="299dp"
+        android:layout_height="77dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="136dp"
+        android:background="@color/colorButton2"
+        android:text="Zpět"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvinfo" />
+
+    <TextView
+        android:id="@+id/tvque"
+        android:layout_width="289dp"
+        android:layout_height="115dp"
+        android:layout_above="@+id/answersgrp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/quizInfoHeader"
+        android:textColor="#000000"
+        android:textSize="35dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvinfo"
+        android:layout_width="261dp"
+        android:layout_height="303dp"
+        android:layout_above="@+id/answersgrp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/quizInfoDescription"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvque" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

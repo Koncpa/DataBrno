@@ -12,4 +12,222 @@
     <string name="menu_generalDemo">Obecná demografie</string>
     <string name="menu_appinfo">Informace o aplikaci</string>
     <string name="menu_quiz">Kvíz</string>
+
+    <string name="year">Rok</string>
+
+
+    <string name="dynamikaPopVyvoj">Dynamika populačního vývoje města</string>
+    <string name="hrubaMiraPorodnost">Hrubá míra porodnosti a úmrtnosti</string>
+    <string name="dynEvoGraph">Dynamika populačního vývoje města - Graf </string>
+    <string name="evoBirthnessGraph">Hrubá míra porodnosti a úmrtnosti - Graf </string>
+    <string name="legendBirthness">Metodické vysvětlivky k demogragickým údajům</string>
+    <string name="legendBirthnessItemDynEvo">
+    <li><b>Hrubá míra přirozeného přírůstku  </b> – rozdíl mezi narozenými a zemřelými na 1000 obyvatel.   </li>\n
+    <li><b>Hrubá míra migračního salda </b> –  rozdíl mezi počtem přistěholavých a vystěhovalých na 1000 obyvatel daného území. </li>\n
+    <li><b>Hrubá míra celkového přírůstku </b> –  celkový populační přírůstek na 1000 obyvatel. </li>\n
+    </string>
+    <string name="legendBirthnessItemEvo">
+        <li><b>Hrubá míra porodnosti </b> – počet zemřelých osob na 1000 obyvatel.  </li>\n
+        <li><b>Hrubá míra úmrtnosti </b> –  počet narozených dětí na 1000 obyvatel.</li>\n
+    </string>
+    <string name="naturalGrowth">Hrubá míra přirozeného přírůstku</string>
+    <string name="migrationSaldo">Hrubá míra migračního salda</string>
+    <string name="allGrowth">Hrubá míra celkového přírůstku</string>
+    <string name="hrubaPorodnostTable">Hrubá míra porodnosti</string>
+    <string name="hrubaUmrtnostTable">Hrubá míra úmrtnosti</string>
+
+    <string name="foreignersGeneral">Tato sekce se věnuje tématu přistehovalectví. Zobrazuje například počty cizinců dle národnosti nebo přírůstek cizinců v posledních letech v okrese Brno-město či Brno-venkov. Data pochází z let 2011 až 2018.</string>
+    <string name="foreignersCount">Počet cizinců </string>
+    <string name="foreignersCountCountry">Země</string>
+    <string name="foreignersCountCount">Počet </string>
+    <string name="foreignersGraphButton">Vybrat země </string>
+    <string name="foreignersGrowthGraphHeader">Tento graf zobrazuje absolutní přírustek počtu cizinců z vybraných zemí v Brně za rok 2018.</string>
+    <string name="foreignersCountGraphHeader">Tento graf zobrazuje počet cizinců z vybraných zemí v Brně k datu 30.6.2019.</string>
+    <string name="foreignersChooseText">Vyberte prosím země, které chcete zobrazit:</string>
+    <string name="legendForCount">
+        <li> Tato tabulka ukazuje počty cizinců dle národnosti v městě Brně.</li>\n
+    </string>
+    <string name="foreignersGrowth">Přírůstek cizinců </string>
+    <string name="legendForGrowth">
+        <li> Tato tabulka ukazuje přírůstek cizinců dle národnosti v městě Brně.</li>\n
+    </string>
+    <string name="foreignersCountEvo">Vývoj počtu cizinců v Brně</string>
+    <string name="foreignersEvoCity">Brno-město </string>
+    <string name="foreignersEvoCountrySide">Brno-venkov </string>
+    <string name="legendForEvo">
+        <li> Tabulka ukazuje vývoj celkového počtu cizinců v Brně a okolí od roku 2011.</li>\n
+    </string>
+    <string name="foreignersCountGraph">Počet cizinců - Graf</string>
+    <string name="foreignersGrowthGraph">Přírůstek cizinců - Graf</string>
+    <string name="foreignersCountEvoGraph">Vývoj počtu cizinců - Graf</string>
+
+    <string name="ageGeneral">Tato sekce zobrazuje statistiky související s věkovým faktorem v populaci, ať už se jedná o celkovou věkovou strukturu obyvatel v Brně, nebo naději na dožití pro mužskou či ženskou populaci. Data pochází z období od roku 2001 do roku 2017.</string>
+    <string name="ageStructure">Věková struktra Brna </string>
+    <string name="ageDistance">Věk </string>
+    <string name="legendAgeStruct">
+        <li> Tato tabulka ukazuje počet můžů a žen v daném věkovém rozpětí v Brně.</li>\n
+    </string>
+    <string name="ageIndex">Index stáří </string>
+    <string name="ageIndexCount">Index stáří (%)</string>
+    <string name="legendAgeIndex">
+        <li> <b>Index stáří</b> – ukazuje kolik obyvatel ve věku 65 a více let připadá na 100 dětí do 15 let.</li>\n
+    </string>
+    <string name="ageHope">Naděje na dožití </string>
+    <string name="ageHopeMenJMK">Muži -JMK </string>
+    <string name="ageHopeWomenJMK">Ženy -JMK </string>
+    <string name="ageHopeMenBrno">Muži -Brno </string>
+    <string name="ageHopeWomenBrno">Ženy -Brno </string>
+    <string name="legendItemAgeHope">
+        <li>Tato tabulka ukazuje průměrný věk jehož dosahují členové dané populace v daném místě a v daném období.  </li>\n
+    </string>
+    <string name="ageStructureGraph">Věková struktra Brna - Graf</string>
+    <string name="ageIndexGraph">Index stáří - Graf </string>
+    <string name="ageHopeGraph">Naděje na dožití - Graf </string>
+
+    <string name="demoGeneral">Tato sekce zobrazuje obecné demografické statistiky jako například hustotu zalidnění, počet obyvatel nebo nezaměstanost ve městě Brně formou grafů a tabulek. Většina dat pochází z období od roku 2001 do roku 2017.</string>
+    <string name="citCountBrnoTable">Vývoj počtu obyvatel v Brně </string>
+    <string name="citCountMenTable">Muži </string>
+    <string name="citCountWomenTable">Ženy </string>
+    <string name="citCountAllTable">Dohromady počet</string>
+    <string name="legendItemCitCount">
+        <li><b>Muži </b> – počet mužů ve městě Brně za daný rok.  </li>\n
+        <li><b>Ženy </b> – počet žen ve městě Brně za daný rok.  </li>\n
+        <li><b>Dohromady </b> – počet všech obyvatel ve městě Brně za daný rok.  </li>\n
+    </string>
+    <string name="humDensityTable">Hustota zalidnění v Brně </string>
+    <string name="humDensityPeople">Počet obyvatel na km<h><sup>2</sup></h></string>
+    <string name="legendItemHumDen">
+        <li><b>Počet obyvatel na km </b><h><sup>2</sup></h> – ukazuje počet obyvatel na kilometr čtvereční ve městě Brně za dané obdobé. </li>\n
+    </string>
+    <string name="unenmTable">Nezaměstnanost </string>
+    <string name="unenmCzechTable">Česká republika </string>
+    <string name="unenmJMKTable">Jihomoravský kraj </string>
+    <string name="unenmBrnoTable">Brno </string>
+    <string name="legendItemUnem">
+      <li> Tato tabulka ukazuje podíl nezaměstnaných osob ze všech obyvatel ve věku od 15-64 let v dané oblasti a v daném období.</li>\n
+    </string>
+    <string name="citCountBrnoGraph">Vývoj počtu obyvatel - Graf </string>
+    <string name="HumDensityGraph">Hustota zalidnění - Graf </string>
+
+    <string name="unenmGraph">Nezaměstnanost - Graf </string>
+
+    <string name="startTest">Start testu</string>
+    <string name="startTree">Informace o kvízu</string>
+    <string name="nextQuestion">Další otázka</string>
+    <string name="quitTest">Konec testu </string>
+    <string name="score">Tvé skóre </string>
+    <string name="quizHeader"><u>Kvíz</u></string>
+    <string name="quizInfo">Tvé skóre </string>
+    <string name="quizInfoHeader"><u>Informace o kvízu</u></string>
+    <string name="quizInfoDescription">Kvíz se sestává z deseti otázek. Vždy je jen jedna správná odpoveď. Z každé datové sady je v kvízu jedna otázka. Záměrně jsou nesprávné hodnoty často přemrštěné, aby se pokázalo na sílu statistiky. Po kvízu následuje vyhodnocení kolik odpovědí bylo správně a kolik špatně. Otázky jsou pokaždé znovu náhodně vygenerovány. </string>
+
+
+    <string name="text_data_info_header">Tato část slouží k získání více informací o datových sadách, které byly využity v aplikaci.</string>
+    <string name="text_data_info_choose">Zvolte datovou sadu: </string>
+    <string name="text_data_back">Zpět</string>
+
+
+    <string name="tmp">---</string>
+    <string-array name="text_spinner_choose_data">
+        <item>@string/tmp</item>
+        <item>@string/citCountBrnoTable</item>
+        <item>@string/humDensityTable</item>
+        <item>@string/unenmTable</item>
+        <item>@string/dynamikaPopVyvoj</item>
+        <item>@string/hrubaMiraPorodnost</item>
+        <item>@string/ageStructure</item>
+        <item>@string/ageIndex</item>
+        <item>@string/ageHope</item>
+        <item>@string/foreignersCount</item>
+        <item>@string/foreignersGrowth</item>
+        <item>@string/foreignersCountEvo</item>
+    </string-array>
+
+    <string-array name="text_spinner_open_data_info">
+        <item>@string/tmp</item>
+        <item>@string/CitCountBrnoTableInfo</item>
+        <item>@string/HumDensityInfo</item>
+        <item>@string/UnenmInfo</item>
+        <item>@string/dynamikaPopVyvojInfo</item>
+        <item>@string/hrubaMiraInfo</item>
+        <item>@string/ageStructureInfo</item>
+        <item>@string/ageIndexInfo</item>
+        <item>@string/ageHopeInfo</item>
+        <item>@string/foreignersCountInfo</item>
+        <item>@string/foreignersGrowthInfo</item>
+        <item>@string/foreignersCountEvoInfo</item>
+    </string-array>
+
+    <string name="CitCountBrnoTableInfo">Data sledují vývoj počtu obyvatel v ročním horizontu ve městě Brně v období od roku 2001 do roku 2017. Autorem dat je Český statistický úřad.</string>
+    <string name="HumDensityInfo">Tato datová sada obsahuje data o hustotě zalidnění, tedy kolik obyvatel v průměru žije na kilometr čtvereční ve městě Brně. Byla zveřejněna z období od roku 2000 do roku 2017. Autorem dat je Český statistický úřad.</string>
+    <string name="UnenmInfo">Data obsahují podíl nezaměstnaných osob ze všech obyvatel ve věku od 15–64 let ve sledovaném období od roku 2007 do roku 2018. Porovnávají situací v České republice, Jihomoravském kraji a měste Brně. Autorem dat je Ministerstvo práce a sociálních věcí.</string>
+    <string name="dynamikaPopVyvojInfo">Data ukazují vývoj přirozeného přírůstku a migračního přírůstku ve městě Brně. Vyslédkem těchto dvou ukazatelů je celkový přírůstek, který je v datech taky zobrazen. Sledují časové období od roku 2001 do roku 2017. Autorem dat je Český statistický úřad. </string>
+    <string name="hrubaMiraInfo">Data obsahují hrubou míru porodnosti a úmrtnosti v období od roku 2001 do roku 2017.  Autorem dat je Český statistický úřad.</string>
+    <string name="ageStructureInfo">Data zobrazují počet můžů a žen v daném věku ve městě Brně v roce 2018. Autorem dat je Český statistický úřad.</string>
+    <string name="ageIndexInfo">Data ukazují index staří ve sledováném období od roku 2001 do roku 2017. Index staří vyjadřuje, kolik je v populaci obyvatel ve věku 60 let a více na 100 dětí ve věku 0–14 let. Autorem dat je Český statistický úřad.</string>
+    <string name="ageHopeInfo">Tato datová sada obsahuje údaje o sřední délce života v daném období a daném místě. Střední délka života vyjadřuje průměrný věk jehož se dožívá mužská či ženská populace. Byla zveřejněna z období od roku 1992 do roku 2016 pro Jihomoravský kraj a pro město Brno z období od roku 2010 do roku 2016. Autorem dat je Český statistický úřad. </string>
+    <string name="foreignersCountInfo">Data ukazují počet cizinců dle národnosti v roce 2018 ve městě Brně. Autorem dat je Ministerstvo vnitra České republiky.</string>
+    <string name="foreignersGrowthInfo">Data ukazují absolutní přírůstek cizinců dle národnosti v roce 2018 ve městě Brně. Autorem dat je Ministerstvo vnitra České republiky.</string>
+    <string name="foreignersCountEvoInfo">Tato data obsahují vývoj celkového počtu cizincí ve městě Brně a v Jihomoravském kraji od začátku roku 2011 do června roku 2019. Autorem dat je Ministerstvo vnitra České republiky.</string>
+
+    <string-array name="text_spinner_open_data_info_url">
+        <item>@string/tmp</item>
+        <item>@string/CitCountBrnoTableInfoUrl</item>
+        <item>@string/HumDensityInfoUrl</item>
+        <item>@string/UnenmInfoUrl</item>
+        <item>@string/dynamikaPopVyvojInfoUrl</item>
+        <item>@string/hrubaMiraInfoUrl</item>
+        <item>@string/ageStructureInfoUrl</item>
+        <item>@string/ageIndexInfoUrl</item>
+        <item>@string/ageHopeInfoUrl</item>
+        <item>@string/foreignersCountInfoUrl</item>
+        <item>@string/foreignersGrowthInfoUrl</item>
+        <item>@string/foreignersCountEvoInfoUrl</item>
+    </string-array>
+
+    <string name="CitCountBrnoTableInfoUrl">https://data.brno.cz/dataset/?id=vyvoj-poctu-obyvatel-v-brne</string>
+    <string name="HumDensityInfoUrl">https://data.brno.cz/dataset/?id=hustota-zalidneni</string>
+    <string name="UnenmInfoUrl">https://data.brno.cz/dataset/?id=podil-nezamestnanych-osob</string>
+    <string name="dynamikaPopVyvojInfoUrl">https://data.brno.cz/dataset/?id=dynamika-populacniho-vyvoje-brna</string>
+    <string name="hrubaMiraInfoUrl">https://data.brno.cz/dataset/?id=hruba-mira-porodnosti-umrtnosti</string>
+    <string name="ageStructureInfoUrl">https://data.brno.cz/dataset/?id=vekova-struktura-brna</string>
+    <string name="ageIndexInfoUrl">https://data.brno.cz/dataset/?id=index-stari</string>
+    <string name="ageHopeInfoUrl">https://data.brno.cz/dataset/?id=nadeje-doziti</string>
+    <string name="foreignersCountInfoUrl">https://data.brno.cz/dataset/?id=cizinci-v-brne-dle-zeme-puvodu</string>
+    <string name="foreignersGrowthInfoUrl">https://data.brno.cz/dataset/?id=cizinci-v-brne-dle-zeme-puvodu</string>
+    <string name="foreignersCountEvoInfoUrl">https://data.brno.cz/dataset/?id=cizinci-v-brne-dle-zeme-puvodu</string>
+
+    <string name="chooseDataSet">Vybrat datovou sadu</string>
+    <string name="openDataSada">Datové sady</string>
+
+    <string name="infoDataSet">Informace o použitých datových sadách</string>
+    <string name="welcomeDataBrno">Vítejte v aplikaci Brno v Datech</string>
+    <string name="whatsOpenData">Co jsou to otevřená data?</string>
+    <string name="OpenDataDescription">Otevřená data jsou informace a data, které jsou snadno dostupná s minimem překážek. Byvají často dostupná prostřednictvím sítě internet a jedná se většinou o informace, které vznikají při činnosti státní správy či dalších veřejných institucí, ale i firem ze soukromého sektoru. Tyto data musí být strojově čítelná a snadno zpracovatelná pro běžné uživatele bez vynaložení nadbytečných nákladů. Otevřená data mohou mít značný hospodářský či sociální užitek. Mají široké uplatnění například jízdní řady na internetu, které často používáme jsou také otevřenými daty. Česká republika má Národní katalog otevřených dat, kde lze naléz různé datové sady. Datové sady použité v této aplikaci ovšem pochází z lokálního katalogu města Brna. </string>
+
+    <string name="openDataHeader"><u>Otevřená data</u></string>
+    <string name="openDataTitle">Otevřená data</string>
+    <string name="openDataNationalData">Více informací</string>
+
+    <string name="infoAboutContact">Kontakt</string>
+    <string name="infoAboutMe">Tato práce je výstupem bakalářské práce na téma \"Open source a otevřená data\". Aplikace je tedy opensource a využívá volně dostupná data veřejné správy. Kontakt na autora této práce je zde: </string>
+    <string name="infoOpenSource">Aby aplikace splňovala definici opensource definici musí být distribuována pod veřejnou licencí. V této práci byla zvolena licence <b>GNU GPL v.3</b>. Odkaz na licenční smlouvu je zde: </string>
+    <string name="infoOpenSourceLicense">GNU GPL v.3 podmínky</string>
+    <string name="infoGraphView">GraphView Github</string>
+    <string name="infoGraphViewInfo">Aplikace obsahuje také jednu opensource knihovnu pod licencí <b>Apache 2.0</b>. Tato knihovna kompletně vykresluje všechny grafy, které se v aplikací nachází. Odkaz na knihovnu je zde: </string>
+
+
+    <string name="appBrnoData">Aplikace Brno v datech poskytuje trochu jiný pohled na demografické údaje města Brna,které jsou pro uživatele prezentovány zábavnou formu grafů a tabulek, zakončený vědomostním kvízem.</string>
+    <string name="appBrnoDataStructure">
+        <b><u>Zde je rozepsána struktura aplikace pro snadnější zorientování v aplikaci :</u></b>\n
+        <li><b>Úvod</b> – obsahuje bližší informace o datových sadách a také co popisuje pojem otevřených dat.</li>\n
+        <li><b>Obecná demografie</b> – sekce obsahuje obecná demografická data jako například hustotu zalidnění či počet obyvatel v městě Brně.</li>\n
+        <li><b>Porodnost</b> – tato část ukazuje datové související s porodností ve formě grafů a tabulek.</li>\n
+        <li><b>Věková struktura</b> – zde například nalezneme údaje o střední délce život, či věkové struktuře ve formě grafů a tabulek.</li>\n
+        <li><b>Cizinci v Brně</b> – sekce zobrazuje vývoj počtu cizinců v městě Brně, či počet cizinců jednotlivých národností.</li>\n
+        <li><b>Kvíz</b> – kvíz prověřuje zajímavé údaje, které se objevili v datových sadách. </li>\n
+        <li><b>Informace o aplikaci</b> – obsahuje informace o autorovi aplikace, použité licenci a o využitých open source knihovnách v aplikaci.</li>\n
+    </string>
+
+
 </resources>
