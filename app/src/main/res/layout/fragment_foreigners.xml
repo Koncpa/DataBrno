@@ -29,7 +29,6 @@
         android:textColor="#ffffff"
         android:textSize="20dp"
         android:background="@drawable/side_nav_bar"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAgeIndexGraph"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonForCo" />
@@ -44,7 +43,6 @@
         android:textColor="#ffffff"
         android:textSize="20dp"
         android:background="@drawable/side_nav_bar"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAgeStructCo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonForGr" />

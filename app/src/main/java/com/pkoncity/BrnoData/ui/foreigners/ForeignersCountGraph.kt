@@ -31,7 +31,7 @@ You should have received a copy of the GNU General Public License
 along with Brno v Datech.  If not, see <https://www.gnu.org/licenses/>.
 
 This part of application uses the library GraphView (https://github.com/jjoe64/GraphView).
-Library is available under the Apache 2.0 license, which can be obtained from http://www.apache.org/licenses/LICENSE-2.0.
+Library is available under the Apache 2.0 license, which can be obtained from http://www.apache.org/licenses/LICENSE-2.0. Or you can find copy of license in this repository with name license.txt
  */
 
 class ForeignersCountGraph : AppCompatActivity() {

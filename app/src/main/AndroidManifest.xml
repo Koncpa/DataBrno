@@ -59,7 +59,8 @@
         <activity
             android:name="com.pkoncity.BrnoData.ui.age.AgeStructureGraph"
             android:label="@string/ageStructureGraph"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name="com.pkoncity.BrnoData.ui.age.AgeIndexGraph"
             android:label="@string/ageIndexGraph"

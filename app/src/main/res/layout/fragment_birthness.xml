@@ -65,7 +65,7 @@
     <TextView
         android:id="@+id/text_mainBirthness"
         android:layout_width="303dp"
-        android:layout_height="66dp"
+        android:layout_height="89dp"
         android:layout_marginBottom="36dp"
         android:autoText="true"
         android:clickable="false"
