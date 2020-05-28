@@ -1,4 +1,4 @@
-This application uses the library GraphView (https://github.com/jjoe64/GraphView).This file is copy of license.
+This application uses the library GraphView (https://github.com/jjoe64/GraphView).This file is copy of license, which is use in GraphView project.
 
 
 
