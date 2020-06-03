@@ -59,7 +59,7 @@ class InfoAppFragment : Fragment() {
         })
         val buttonGitHub = root.findViewById(R.id.buttonGitHub) as Button
         buttonGitHub.setOnClickListener(View.OnClickListener {
-            val uri: Uri = Uri.parse("https://github.com/Koncpa/DataBrno")
+            val uri: Uri = Uri.parse("https://github.com/Koncpa/DataBrno/blob/master/COPYING.txt")
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
         })
