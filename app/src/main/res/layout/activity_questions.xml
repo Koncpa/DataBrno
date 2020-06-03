@@ -66,10 +66,10 @@
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintHorizontal_bias="0.618"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/answersgrp"
-        app:layout_constraintVertical_bias="0.227" />
+        app:layout_constraintVertical_bias="0.281" />
 
     <Button
         android:id="@+id/buttonquit"
@@ -78,21 +78,23 @@
         android:layout_below="@+id/button3"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="157dp"
+        android:layout_marginBottom="160dp"
         android:background="#01579B"
         android:text="@string/quitTest"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintHorizontal_bias="0.622"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answersgrp"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tvres" />
 
     <TextView
         android:id="@+id/tvque"
-        android:layout_width="343dp"
-        android:layout_height="93dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_above="@+id/answersgrp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -169,10 +171,12 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#000000"
         android:textSize="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvres2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvres2"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

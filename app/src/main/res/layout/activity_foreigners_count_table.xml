@@ -10,8 +10,8 @@
 
     <ScrollView
         android:id="@+id/scrollView1"
-        android:layout_width="380dp"
-        android:layout_height="512dp"
+        android:layout_width="364dp"
+        android:layout_height="410dp"
         android:background="#292930"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +74,6 @@
         android:id="@+id/text_ForCountLegend"
         android:layout_width="324dp"
         android:layout_height="25dp"
-        android:layout_marginTop="8dp"
         android:clickable="false"
         android:gravity="center"
         android:text="@string/legendBirthness"
@@ -90,7 +89,6 @@
         android:id="@+id/text_ItemForCount"
         android:layout_width="351dp"
         android:layout_height="119dp"
-        android:layout_marginTop="12dp"
         android:clickable="false"
         android:text="@string/legendForCount"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"

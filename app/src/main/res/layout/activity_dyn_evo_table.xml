@@ -10,15 +10,13 @@
 
     <ScrollView
         android:id="@+id/scrollView1"
-        android:layout_width="382dp"
-        android:layout_height="480dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="359dp"
+        android:layout_height="346dp"
         android:background="#292930"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058">
+        app:layout_constraintTop_toTopOf="parent">
 
         <HorizontalScrollView
             android:id="@+id/hscrll1"
@@ -91,36 +89,31 @@
         </HorizontalScrollView>
     </ScrollView>
 
-
     <TextView
         android:id="@+id/text_birthnessLegend"
         android:layout_width="324dp"
         android:layout_height="25dp"
-        android:layout_marginTop="18dp"
         android:clickable="false"
         android:gravity="center"
         android:text="@string/legendBirthness"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/text_ItemBirthness"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView1"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView1" />
 
     <TextView
         android:id="@+id/text_ItemBirthness"
         android:layout_width="351dp"
         android:layout_height="154dp"
-        android:layout_marginBottom="16dp"
         android:clickable="false"
         android:text="@string/legendBirthnessItemDynEvo"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_birthnessLegend" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

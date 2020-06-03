@@ -9,8 +9,8 @@
 
     <ScrollView
         android:id="@+id/scrollView1"
-        android:layout_width="387dp"
-        android:layout_height="486dp"
+        android:layout_width="344dp"
+        android:layout_height="417dp"
         android:background="#292930"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.541"
@@ -74,7 +74,7 @@
         android:id="@+id/text_ForGrowthLegend"
         android:layout_width="324dp"
         android:layout_height="25dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:clickable="false"
         android:gravity="center"
         android:text="@string/legendBirthness"
@@ -82,7 +82,7 @@
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView1" />
 

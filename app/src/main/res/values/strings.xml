@@ -20,7 +20,7 @@
     <string name="hrubaMiraPorodnost">Hrubá míra porodnosti a úmrtnosti</string>
     <string name="dynEvoGraph">Dynamika populačního vývoje města - Graf </string>
     <string name="evoBirthnessGraph">Hrubá míra porodnosti a úmrtnosti - Graf </string>
-    <string name="legendBirthness">Metodické vysvětlivky k demogragickým údajům</string>
+    <string name="legendBirthness">Metodické vysvětlivky k údajům</string>
     <string name="legendBirthnessItemDynEvo">
     <li><b>Hrubá míra přirozeného přírůstku  </b> – rozdíl mezi narozenými a zemřelými na 1000 obyvatel.   </li>\n
     <li><b>Hrubá míra migračního salda </b> –  rozdíl mezi počtem přistěholavých a vystěhovalých na 1000 obyvatel daného území. </li>\n
@@ -97,7 +97,7 @@
     <string name="humDensityTable">Hustota zalidnění v Brně </string>
     <string name="humDensityPeople">Počet obyvatel na km<h><sup>2</sup></h></string>
     <string name="legendItemHumDen">
-        <li><b>Počet obyvatel na km </b><h><sup>2</sup></h> – ukazuje počet obyvatel na kilometr čtvereční ve městě Brně za dané obdobé. </li>\n
+        <li><b>Počet obyvatel na km </b><h><sup>2</sup></h> – ukazuje počet obyvatel na kilometr čtvereční ve městě Brně za dané období. </li>\n
     </string>
     <string name="unenmTable">Nezaměstnanost </string>
     <string name="unenmCzechTable">Česká republika </string>
@@ -201,7 +201,7 @@
     <string name="openDataSada">Datové sady</string>
 
     <string name="infoDataSet">Informace o použitých datových sadách</string>
-    <string name="welcomeDataBrno">Vítejte v aplikaci Brno v Datech</string>
+    <string name="welcomeDataBrno">Vítejte</string>
     <string name="whatsOpenData">Co jsou to otevřená data?</string>
     <string name="OpenDataDescription">Otevřená data jsou informace a data, které jsou snadno dostupná s minimem překážek. Byvají často dostupná prostřednictvím sítě internet a jedná se většinou o informace, které vznikají při činnosti státní správy či dalších veřejných institucí, ale i firem ze soukromého sektoru. Tyto data musí být strojově čítelná a snadno zpracovatelná pro běžné uživatele bez vynaložení nadbytečných nákladů. Otevřená data mohou mít značný hospodářský či sociální užitek. Mají široké uplatnění například jízdní řady na internetu, které často používáme jsou také otevřenými daty. Česká republika má Národní katalog otevřených dat, kde lze naléz různé datové sady. Datové sady použité v této aplikaci ovšem pochází z lokálního katalogu města Brna. </string>
 

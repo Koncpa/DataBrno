@@ -150,4 +150,10 @@
         </activity>
     </application>
 
+    <supports-screens android:smallScreens="false"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"/>
+
+
 </manifest>

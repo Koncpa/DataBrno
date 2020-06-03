@@ -9,9 +9,11 @@
 
     <ScrollView
         android:id="@+id/scrollView1"
-        android:layout_width="397dp"
-        android:layout_height="415dp"
+        android:layout_width="365dp"
+        android:layout_height="364dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:background="#292930"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
@@ -72,9 +74,9 @@
 
     <TextView
         android:id="@+id/text_AgeIndexLegend"
-        android:layout_width="324dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="338dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
         android:clickable="false"
         android:gravity="center"
         android:text="@string/legendBirthness"
@@ -82,15 +84,17 @@
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView1" />
 
     <TextView
         android:id="@+id/text_ItemAgeIndex"
-        android:layout_width="329dp"
-        android:layout_height="97dp"
+        android:layout_width="317dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:clickable="false"
         android:text="@string/legendAgeIndex"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"

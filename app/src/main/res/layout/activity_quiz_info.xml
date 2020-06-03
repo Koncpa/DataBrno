@@ -8,8 +8,10 @@
 
     <Button
         android:id="@+id/btnBackInfoQuiz"
-        android:layout_width="299dp"
-        android:layout_height="77dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
@@ -24,8 +26,10 @@
 
     <TextView
         android:id="@+id/tvque"
-        android:layout_width="289dp"
-        android:layout_height="115dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="32dp"
@@ -40,8 +44,10 @@
 
     <TextView
         android:id="@+id/tvinfo"
-        android:layout_width="261dp"
-        android:layout_height="303dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="20dp"

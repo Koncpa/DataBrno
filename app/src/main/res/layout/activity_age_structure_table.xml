@@ -10,10 +10,11 @@
 
     <ScrollView
         android:id="@+id/scrollView1"
-        android:layout_width="374dp"
-        android:layout_height="486dp"
+        android:layout_width="370dp"
+        android:layout_height="410dp"
         android:background="#292930"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
