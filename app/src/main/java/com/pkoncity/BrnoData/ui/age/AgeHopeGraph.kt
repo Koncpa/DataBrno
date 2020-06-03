@@ -78,7 +78,8 @@ class AgeHopeGraph : AppCompatActivity() {
             series2.setDrawDataPoints(true)
 
 
-            if (value.year!!.rem(2) == 0 || value.year == 2001) {
+
+            if (value.year!!.rem(2) != 0 || value.year == 2016) {
                 readerAndMaps.tmpArrList.add(value.year.toString())
             }
 

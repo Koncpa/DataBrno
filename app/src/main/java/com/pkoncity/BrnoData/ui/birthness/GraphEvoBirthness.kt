@@ -64,7 +64,7 @@ class GraphEvoBirthness : AppCompatActivity() {
             series2.appendData(DataPoint(x, z), true, 20)
             series2.setDrawDataPoints(true)
 
-            if (value.year!!.rem(2) == 0 || value.year == 2001) {
+            if (value.year!!.rem(2) != 0 ) {
                 readerAndMaps.tmpArrList.add(value.year.toString())
             }
 
