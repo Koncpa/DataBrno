@@ -30,13 +30,17 @@ along with Brno v Datech.  If not, see <https://www.gnu.org/licenses/>.
 
 class QuestionsActivity : AppCompatActivity() {
 
+    /**
+    This activity manage quiz section.
+     */
 
+    //Initialization of readerAndMaps class which load data from .csv files.
     private val readerAndMaps = ReaderAndMaps()
+    //Initialize helping arraylist and variables
     val questionsArrList = ArrayList<String>()
     val optionArrList = ArrayList<String>()
     val randomGenerator = Random()
     var point = 0
-    var marks = 0
     var correct: Int = 0
     var wrong: Int = 0
 
@@ -44,8 +48,10 @@ class QuestionsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
 
+        //Load all datasets to HashMaps.
         readerAndMaps.allReaders(resources)
 
+        //Call methods which create unique questin
         questionCitizenCount()
         questionHumanDensity()
         questionUnemployment()
@@ -56,14 +62,17 @@ class QuestionsActivity : AppCompatActivity() {
         questionAgeHope()
         questionForCount()
         questionForGrowth()
+        //set dynamic title
         getSupportActionBar()?.setTitle("Kvíz - Otázka 1/" + questionsArrList.size)
 
+        //Initialize components of buttons,textviews, radiobuttons and radiogroup.
         val score = findViewById(R.id.textView4) as TextView
         val quitbutton = findViewById(R.id.buttonquit) as Button
         quitbutton.setVisibility(View.GONE)
         val subbutton = findViewById(R.id.button3) as Button
         val corectresult = findViewById(R.id.tvres2) as TextView
         val wrongresult = findViewById(R.id.tvres) as TextView
+        //Set some textviews invisible.
         corectresult.setVisibility(View.GONE)
         wrongresult.setVisibility(View.GONE)
         val textviewque = findViewById(R.id.tvque) as TextView
@@ -72,13 +81,15 @@ class QuestionsActivity : AppCompatActivity() {
         val radiob2 = findViewById(R.id.radioButton2) as RadioButton
         val radiob3 = findViewById(R.id.radioButton3) as RadioButton
         val radiob4 = findViewById(R.id.radioButton4) as RadioButton
+        //Set first round of questions and options to textview and arraylist
         textviewque.text = questionsArrList.get(point)
         radiob1.text = optionArrList.get(0)
         radiob2.setText(optionArrList.get(1))
         radiob3.setText(optionArrList.get(2))
         radiob4.setText(optionArrList.get(3))
-        subbutton.setOnClickListener(View.OnClickListener {
 
+        subbutton.setOnClickListener(View.OnClickListener {
+            //If not choosed any option onClick button return error
             if (radio_group.checkedRadioButtonId == -1) {
                 Toast.makeText(
                     applicationContext,
@@ -87,74 +98,98 @@ class QuestionsActivity : AppCompatActivity() {
                 ).show()
                 return@OnClickListener
             }
+            //take options, which will be choosed
             val uans =
                 findViewById(radio_group.checkedRadioButtonId) as RadioButton
+            //Answer to string.
             val answerText = uans.text.toString()
+            //If choosed answer is equal to right string
             if (answerText == readerAndMaps.tmpArrList.get(point)) {
+                //iterate correct
                 correct++
                 Toast.makeText(applicationContext, "Správně", Toast.LENGTH_SHORT)
                     .show()
-            } else {
+            }
+            //If choosed answer is not equal to right string
+            else {
+                //iterate wrong
                 wrong++
                 Toast.makeText(applicationContext, "Špatně", Toast.LENGTH_SHORT).show()
             }
             point++
+
             if (score != null) score.text = "" + correct
+            //If point is not greater than questions array list, then add new round of questions.
             if (point < questionsArrList.size) {
                 val tmp = 1
+                //Update title
                 getSupportActionBar()?.setTitle("Kvíz - Otázka " + tmp.plus(point) + "/" + questionsArrList.size)
+                //Set to textView new question.
                 textviewque.text = questionsArrList.get(point)
+                //Set new options which we take from option arraylist.
                 radiob1.text = optionArrList.get(point * 4)
                 radiob2.setText(optionArrList.get(point * 4 + 1))
                 radiob3.setText(optionArrList.get(point * 4 + 2))
                 radiob4.setText(optionArrList.get(point * 4 + 3))
             } else {
+                //After all questions
+                //Update title
                 getSupportActionBar()?.setTitle("Výsledek")
+                //Set visible some components and also some set invisible.
                 subbutton.setVisibility(View.GONE)
                 radio_group.setVisibility(View.GONE)
                 corectresult.setVisibility(View.VISIBLE)
+                //Set textView with corrent answers
                 corectresult.setText("Dobře: " + correct)
                 corectresult.setGravity(Gravity.CENTER)
                 wrongresult.setVisibility(View.VISIBLE)
+                //Set textView with wrong answers
                 wrongresult.setText("Špatně: " + wrong)
                 wrongresult.setGravity(Gravity.CENTER)
                 textView4.setVisibility(View.INVISIBLE)
                 textView3.setVisibility(View.INVISIBLE)
                 tvque.setText("Výsledné skóre testu:")
                 tvque.setGravity(Gravity.CENTER)
-
-                marks = correct
                 quitbutton.setVisibility(View.VISIBLE)
                 radio_group.setVisibility(View.GONE)
 
             }
+            //Clear radio group
             radio_group.clearCheck()
         })
+        //Button which get back to starting fragment.
         quitbutton.setOnClickListener(View.OnClickListener {
             onBackPressed()
         })
     }
 
 
+    //Same principes as first question, only other type of question.
     fun questionCitizenCount() {
+        //Take random number from 0 to HashMapSize.
         var randomNumber = randomGenerator.nextInt(readerAndMaps.hashItemCitizenCount.size)
+        //Take object attributes from specific object from HashMap which is choosed by random number.
         val tmp1 = readerAndMaps.hashItemCitizenCount.get(randomNumber)?.countMen
         val tmp2 = readerAndMaps.hashItemCitizenCount.get(randomNumber)?.countWomen!!
+        //Plus two values.
         val tmp = tmp1?.plus(tmp2)
+        //Add tmp variable to arraylist
         readerAndMaps.tmpArrList.add(tmp.toString())
 
 
-
-
-        questionsArrList.add("V roce " + readerAndMaps.hashItemCitizenCount.get(randomNumber)?.year.toString() + " bylo ve městě Brně kolik obyvatel?")
+        //Add question to questionList
+        questionsArrList.add("Kolik bylo v roce " + readerAndMaps.hashItemCitizenCount.get(randomNumber)?.year.toString() + " ve městě Brně obyvatel?")
+        //Choose random number
         randomNumber = (1..4).random()
         if (tmp != null) {
+            //Call method which create question options, add to this method right answer
             forMethodHelpInt(randomNumber, 100000, 2, 100000, tmp, false)
         }
 
 
     }
 
+    //Same principes as first question, only other type of question.
     fun questionHumanDensity() {
 
         var randomNumber = randomGenerator.nextInt(readerAndMaps.hashItemHumanDensity.size)
@@ -176,6 +211,7 @@ class QuestionsActivity : AppCompatActivity() {
 
     }
 
+    //Same principes as first question, only other type of question.
     fun questionUnemployment() {
         var randomNumber = randomGenerator.nextInt(readerAndMaps.hashItemUnemployment.size)
         val tmp = readerAndMaps.hashItemUnemployment.get(randomNumber)?.unemploymentBrno
@@ -195,6 +231,7 @@ class QuestionsActivity : AppCompatActivity() {
 
     }
 
+    //Same principes as first question, only other type of question.
     fun questionDynEvo() {
         var randomNumber = randomGenerator.nextInt(readerAndMaps.hashItemDynEvolution.size)
         val tmp = readerAndMaps.hashItemDynEvolution.get(randomNumber)?.allGrowth
@@ -213,7 +250,7 @@ class QuestionsActivity : AppCompatActivity() {
         }
 
     }
-
+    //Same principes as first question, only other type of question.
     fun questionEvoBirthnes() {
         var randomNumber = randomGenerator.nextInt(readerAndMaps.hashItemEvoBirthness.size)
         val tmp = readerAndMaps.hashItemEvoBirthness.get(randomNumber)?.birthness
@@ -233,7 +270,7 @@ class QuestionsActivity : AppCompatActivity() {
 
     }
 
-
+    //Same principes as first question, only other type of question.
     fun questionAgeStructure() {
 
         var randomNumber = randomGenerator.nextInt(readerAndMaps.hashItemAgeStructure.size)
@@ -254,7 +291,7 @@ class QuestionsActivity : AppCompatActivity() {
 
     }
 
-
+    //Same principes as first question, only other type of question.
     fun questionAgeIndex() {
         var randomNumber = randomGenerator.nextInt(readerAndMaps.hashItemAgeIndex.size)
         val tmp = readerAndMaps.hashItemAgeIndex.get(randomNumber)?.indexPercentage
@@ -271,7 +308,7 @@ class QuestionsActivity : AppCompatActivity() {
         }
 
     }
-
+    //Same principes as first question, only other type of question.
     fun questionAgeHope() {
 
         var randomNumber = randomGenerator.nextInt(readerAndMaps.hashItemAgeHope.size)
@@ -292,7 +329,7 @@ class QuestionsActivity : AppCompatActivity() {
 
 
     }
-
+    //Same principes as first question, only other type of question.
     fun questionForCount() {
 
         var randomNumber = 0
@@ -323,7 +360,7 @@ class QuestionsActivity : AppCompatActivity() {
 
 
     }
-
+    //Same principes as first question, only other type of question.
     fun questionForGrowth() {
         var randomNumber = 0
         for (i in 1..200) {
@@ -353,6 +390,7 @@ class QuestionsActivity : AppCompatActivity() {
     }
 
 
+    //This method help make random question position for int variables and right answer. This method is same for a few questions.
     fun forMethodHelpInt(
         randomNumber: Int,
         plus: Int,
@@ -362,44 +400,54 @@ class QuestionsActivity : AppCompatActivity() {
         lowCount: Boolean
     ) {
         var foo = 0
+
         if (lowCount == false) {
+            //Make for from 1..4 to create option position
             for (i in 1..4) {
+                //Conditional of get position for right answer and postions for other options.
                 if (randomNumber == i) {
+                    //Add to option arraylist.
                     optionArrList.add(tmp.toString())
 
                 } else if (foo == 0 && randomNumber != i) {
-
+                    //Add to option arraylist.
                     optionArrList.add((tmp.plus(plus)).toString())
                     foo++
 
 
                 } else if (foo == 1 && randomNumber != i) {
+                    //Add to option arraylist.
                     optionArrList.add((tmp.times(times)).toString())
                     foo++
 
                 } else if (foo == 2 && randomNumber != i) {
+                    //Add to option arraylist.
                     optionArrList.add((tmp.minus(minus)).toString())
                     foo++
                 }
 
             }
         }
+        //same as previous part, but for question which variables are small ints.
         if (lowCount == true) {
             for (i in 1..4) {
                 if (randomNumber == i) {
+                    //Add to option arraylist.
                     optionArrList.add(tmp.toString())
 
                 } else if (foo == 0 && randomNumber != i) {
-
+                    //Add to option arraylist.
                     optionArrList.add((tmp.plus(plus)).toString())
                     foo++
 
 
                 } else if (foo == 1 && randomNumber != i) {
+                    //Add to option arraylist.
                     optionArrList.add((tmp.times(times)).toString())
                     foo++
 
                 } else if (foo == 2 && randomNumber != i) {
+                    //Add to option arraylist.
                     optionArrList.add((tmp.plus(20)).toString())
                     foo++
                 }
@@ -410,6 +458,7 @@ class QuestionsActivity : AppCompatActivity() {
 
     }
 
+    //This method help make random question position for double variables and right answer. This method is same for a few questions.
     fun forMethodHelpDouble(
         randomNumber: Int,
         plus: Int,
@@ -420,44 +469,52 @@ class QuestionsActivity : AppCompatActivity() {
     ) {
         var foo = 0
         if (percentage == true) {
+            //Make for from 1..4 to create option position
             for (i in 1..4) {
+                //Conditional of get position for right answer and postions for other options.
                 if (randomNumber == i) {
+                    //Add to option arraylist.
                     optionArrList.add(tmp.toString() + "%")
 
                 } else if (foo == 0 && randomNumber != i) {
-
+                    //Add to option arraylist.
                     optionArrList.add(String.format("%.2f", (tmp.plus(plus))) + "%")
                     foo++
 
 
                 } else if (foo == 1 && randomNumber != i) {
-
+                    //Add to option arraylist.
                     optionArrList.add(String.format("%.2f", (tmp.times(times))) + "%")
                     foo++
 
                 } else if (foo == 2 && randomNumber != i) {
+                    //Add to option arraylist.
                     optionArrList.add(String.format("%.2f", (tmp.minus(minus))) + "%")
                     foo++
                 }
 
             }
         }
+        //same as previous part, but for question which contain percentage.
         if (percentage == false) {
             for (i in 1..4) {
                 if (randomNumber == i) {
+                    //Add to option arraylist.
                     optionArrList.add(tmp.toString())
 
                 } else if (foo == 0 && randomNumber != i) {
-
+                    //Add to option arraylist.
                     optionArrList.add(String.format("%.1f", (tmp.plus(plus))))
                     foo++
 
 
                 } else if (foo == 1 && randomNumber != i) {
+                    //Add to option arraylist.
                     optionArrList.add(String.format("%.1f", (tmp.times(times))))
                     foo++
 
                 } else if (foo == 2 && randomNumber != i) {
+                    //Add to option arraylist.
                     optionArrList.add(String.format("%.1f", (tmp.minus(minus))))
                     foo++
                 }

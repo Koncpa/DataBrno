@@ -27,16 +27,21 @@ along with Brno v Datech.  If not, see <https://www.gnu.org/licenses/>.
 
 class OpenDataUrl : AppCompatActivity() {
 
+    /**
+    This activity show information about data sets, which are used in app.
+     */
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_open_data_url)
+        //Initialize some helping arraylist for this activity which conatin list of data sets names and description.
         val tmpArrList = resources.getStringArray(R.array.text_spinner_choose_data).toList()
         val openDataList = resources.getStringArray(R.array.text_spinner_open_data_info).toList()
         val urlDataArrList =
             resources.getStringArray(R.array.text_spinner_open_data_info_url).toList()
         var tmp = 0
-
+        //Initialize components of buttons, spinners and textView for this activity.
         val spinner = findViewById(R.id.spinner_choose_data) as Spinner
         val buttonChoose = findViewById(R.id.button_general_info_data_url_choose) as Button
         val buttonBackMain = findViewById(R.id.button_general_info_data_back_main) as Button
@@ -46,16 +51,22 @@ class OpenDataUrl : AppCompatActivity() {
         val textChooseData = findViewById(R.id.textView_choose_data) as TextView
         val textOpenData = findViewById(R.id.textView_info_open_data) as TextView
 
+
+        //set invisible some components
         buttonBack.setVisibility(View.INVISIBLE)
         buttonOpen.setVisibility(View.INVISIBLE)
         textOpenData.setVisibility(View.INVISIBLE)
 
+        //Initialize adapter for spinner and add arraylist
         val adapter =
             ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, tmpArrList)
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
+        //Add adapter to spinner
         spinner.setAdapter(adapter)
 
+        //Button which take string from spinner and then show info about choosed data set
         buttonChoose.setOnClickListener(View.OnClickListener {
+            //Condition if selected item is empty, then show app toast erro.
             if (spinner.getSelectedItem().toString() == "---") {
                 Toast.makeText(
                     applicationContext,
@@ -64,6 +75,7 @@ class OpenDataUrl : AppCompatActivity() {
                 ).show()
                 return@OnClickListener
             }
+            //Set visible some components like buttons and invisible spinner.
             buttonBack.setVisibility(View.VISIBLE)
             buttonBackMain.setVisibility(View.INVISIBLE)
             buttonOpen.setVisibility(View.VISIBLE)
@@ -71,6 +83,7 @@ class OpenDataUrl : AppCompatActivity() {
             spinner.setVisibility(View.INVISIBLE)
             textChooseData.setVisibility(View.INVISIBLE)
             buttonChoose.setVisibility(View.INVISIBLE)
+            //For loop which iterate arraylist and equal with choosed string, if its equal then show info about data set.
             for (i in 1..11) {
 
                 if (spinner.getSelectedItem().toString() == tmpArrList[i]) {
@@ -85,12 +98,14 @@ class OpenDataUrl : AppCompatActivity() {
 
         })
 
+        //Button which open browser with url where you can download this data set.
         buttonOpen.setOnClickListener(View.OnClickListener {
             val uri: Uri = Uri.parse(urlDataArrList[tmp])
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
         })
 
+        //Button back which set scene to previous scene where you can choose options from list.
         buttonBack.setOnClickListener(View.OnClickListener {
             textDataInfo.setText(R.string.text_data_info_header)
             textDataInfo.setTextSize(20.00F)
@@ -99,8 +114,10 @@ class OpenDataUrl : AppCompatActivity() {
                 R.layout.support_simple_spinner_dropdown_item,
                 tmpArrList
             )
+            //set adapter with list
             adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
             spinner.setAdapter(adapter)
+            //Set invisible some components.
             buttonBackMain.setVisibility(View.VISIBLE)
             buttonBack.setVisibility(View.INVISIBLE)
             buttonOpen.setVisibility(View.INVISIBLE)
@@ -110,6 +127,7 @@ class OpenDataUrl : AppCompatActivity() {
             buttonChoose.setVisibility(View.VISIBLE)
         })
 
+        //Button which you get back to previous fragment.
         buttonBackMain.setOnClickListener(View.OnClickListener {
             onBackPressed()
         })
