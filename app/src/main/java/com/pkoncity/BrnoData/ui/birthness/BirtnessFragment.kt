@@ -22,7 +22,7 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Foobar is distributed in the hope that it will be useful,
+Brno v Datech is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -34,9 +34,9 @@ along with Brno v Datech.  If not, see <https://www.gnu.org/licenses/>.
 class BirtnessFragment : Fragment() {
 
 
-    //private lateinit var textView2: TextView
-    private val readerAndMaps = ReaderAndMaps()
-
+    /**
+    This fragment manage components for example as buttons and textviews which are showed in Birthness section.
+     */
 
     private lateinit var birthnessViewModel: BirthnessViewModel
 
@@ -49,12 +49,10 @@ class BirtnessFragment : Fragment() {
             ViewModelProviders.of(this).get(BirthnessViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_birthness, container, false)
 
-        val textView: TextView = root.findViewById(R.id.text_mainBirthness)
-        birthnessViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
 
+        //Initialization of button which start new activity which will be show Table.
         val buttonTableDynEvo = root.findViewById<Button>(R.id.buttonDynEvo)
+        //SetOnClick lister for starting new activity with table.
         buttonTableDynEvo.setOnClickListener {
             activity?.let {
                 val intent = Intent(this.context, DynEvoActivityTable::class.java)
@@ -65,7 +63,9 @@ class BirtnessFragment : Fragment() {
 
         }
 
+        //Initialization of button which start new activity which will be show Table.
         val buttonTableBirthness = root.findViewById<Button>(R.id.buttonEvoBirth)
+        //SetOnClick lister for starting new activity with table.
         buttonTableBirthness.setOnClickListener {
             activity?.let {
                 val intent = Intent(this.context, EvoBirthnessActivityTable::class.java)
@@ -75,8 +75,9 @@ class BirtnessFragment : Fragment() {
 
 
         }
-
+        //Initialization of button which start new activity which will be show graph.
         val buttonGraphDynEvo = root.findViewById<Button>(R.id.buttonDyn_Evo_Graph)
+        //SetOnClick lister for starting new activity with graph.
         buttonGraphDynEvo.setOnClickListener {
             activity?.let {
                 val intent = Intent(this.context, GraphDynEvo::class.java)
@@ -87,7 +88,9 @@ class BirtnessFragment : Fragment() {
 
         }
 
+        //Initialization of button which start new activity which will be show graph.
         val buttonGraphBirthness = root.findViewById<Button>(R.id.buttonBirthness_Evo_Graph)
+        //SetOnClick lister for starting new activity with graph.
         buttonGraphBirthness.setOnClickListener {
             activity?.let {
                 val intent = Intent(this.context, GraphEvoBirthness::class.java)

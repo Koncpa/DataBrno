@@ -21,7 +21,7 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Foobar is distributed in the hope that it will be useful,
+Brno v Datech is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -35,34 +35,47 @@ Library is available under the Apache 2.0 license, which can be obtained from ht
 
 class AgeIndexGraph : AppCompatActivity() {
 
+    /**
+    This activity use data from .csv file and create Age Index graph.
+     */
+
+    //Initialization of readerAndMap class which load data from .csv files.
     private val readerAndMaps = ReaderAndMaps()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_age_index_graph)
 
+        //Initialization component of graph which is from open source library GraphView.
         val graph = findViewById<View>(R.id.graphAgeIndex) as GraphView
 
+        //Load specific data set to HashMap from .csv file.
         readerAndMaps.ageIndexReader(resources)
 
+        //Initialization component of graph series to which will be load data which will be point in graph.
         val series1 = BarGraphSeries<DataPoint>()
 
+        //Set manual maximum and minimum of axis Y.
         graph.getViewport().setYAxisBoundsManual(true);
         graph.getViewport().setMinY(100.0);
         graph.getViewport().setMaxY(140.0);
 
+        //For loop which iterate every object in HashMap and add attributes of object to graph series.
         for ((key, value) in readerAndMaps.hashItemAgeIndex) {
 
+            //Adding attributes of object to tmp variable.
             val x = value.year?.toDouble()!!
-
             val y = value.indexPercentage
 
+            //Add tmp variables to graph series.
             series1.appendData(DataPoint(x, y), true, 30)
 
+            //Saving attribute of year from object to tmp array list, with some condition.
             if (value.year!!.rem(2) != 0) {
                 readerAndMaps.tmpArrList.add(value.year.toString())
             }
 
+            //Set color properties of added point.
             series1.setValueDependentColor(ValueDependentColor<DataPoint> { data ->
                 Color.rgb(
                     data.x.toInt() * 20 / 4,
@@ -74,19 +87,25 @@ class AgeIndexGraph : AppCompatActivity() {
 
         }
 
+        //Create array list which will contain static label strings.
         val tmpArr =
             readerAndMaps.tmpArrList.toArray(arrayOfNulls<String>(readerAndMaps.tmpArrList.size))
 
         val staticLabelsFormatter = StaticLabelsFormatter(graph)
+        //Create array list which will contain static label strings.
         staticLabelsFormatter.setHorizontalLabels(tmpArr)
 
+
+        //Setting label properties.
         graph.gridLabelRenderer.labelFormatter = staticLabelsFormatter
         graph.getLegendRenderer().setVisible(true)
         graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP)
         graph.gridLabelRenderer.setHorizontalAxisTitle("Index stáří");
 
+        //Setting series of point properties.
         series1.setSpacing(10);
         series1.setDrawValuesOnTop(true)
+        //Add series to graph.
         graph.addSeries(series1)
     }
 }

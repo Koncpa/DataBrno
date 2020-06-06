@@ -16,7 +16,7 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Foobar is distributed in the hope that it will be useful,
+Brno v Datech is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -27,16 +27,23 @@ along with Brno v Datech.  If not, see <https://www.gnu.org/licenses/>.
 
 class OpenDataInfo : AppCompatActivity() {
 
+    /**
+    This activity show more info about open data.
+     */
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_open_data_info)
 
+        //Button which onBackPressed()
         val buttonBack = findViewById(R.id.buttonBackOpenData) as Button
         buttonBack.setOnClickListener(View.OnClickListener {
             onBackPressed()
         })
 
+        //Button which open website related with open data
         val buttonMoreInfo = findViewById(R.id.buttonNationalData) as Button
+        //Button which open browser with website narodni katalog otevrenych dat
         buttonMoreInfo.setOnClickListener(View.OnClickListener {
             val uri: Uri = Uri.parse("https://opendata.gov.cz/informace:start")
             val intent = Intent(Intent.ACTION_VIEW, uri)

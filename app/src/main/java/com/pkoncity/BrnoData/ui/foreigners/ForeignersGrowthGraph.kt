@@ -22,7 +22,7 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Foobar is distributed in the hope that it will be useful,
+Brno v Datech is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -36,42 +36,59 @@ Library is available under the Apache 2.0 license, which can be obtained from ht
 
 class ForeignersGrowthGraph : AppCompatActivity() {
 
+    /**
+    This activity use data from .csv file and create Foreigners growth graph.
+     */
+
+    //Initialization of readerAndMaps class which load data from .csv files.
+
+
     private val readerAndMaps = ReaderAndMaps()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_foreigners_growth_graph)
-
+        //Initialization components of spinners, buttons and textviews.
         val spinnerOne = findViewById(R.id.spinner_one_growth) as Spinner
         val spinnerTwo = findViewById(R.id.spinner_two_growth) as Spinner
         val spinnerThree = findViewById(R.id.spinner_three_growth) as Spinner
         val buttonGraph = findViewById(R.id.button_choose_nationality_growth) as Button
         val textFor = findViewById(R.id.text_foreigners_growth_graph) as TextView
         val textForNext = findViewById(R.id.text_choose_countries_growth) as TextView
+        //Initialization component of graph which is from open source library GraphView.
         val graph = findViewById<View>(R.id.graph_for_growth) as GraphView
 
+        //Set graphv invisible.
         graph.setVisibility(View.INVISIBLE)
 
+        //Load specific data set to HashMap from .csv file.
         readerAndMaps.foreignersGrowthReader(resources)
+        //Iterate all objects in HashMap and save attributes from objects to tmpArrList
         for ((key, value) in readerAndMaps.hashItemForeignersGrowth) {
 
             readerAndMaps.tmpArrList.add(value.country.toString())
 
         }
+        //Add to arraylist string
         readerAndMaps.tmpArrList.add(0, "-Zvolte zemi-")
+        //Sort arraylist from A to Z
         Collections.sort(readerAndMaps.tmpArrList, String.CASE_INSENSITIVE_ORDER)
 
+        //Initialize adapter for spinners where we add to spinners arraylist, which we can show in spinner.
         val adapter = ArrayAdapter<String>(
             this,
             R.layout.support_simple_spinner_dropdown_item,
             readerAndMaps.tmpArrList
         )
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
+        //Add adapters to spinners.
         spinnerOne.setAdapter(adapter)
         spinnerTwo.setAdapter(adapter)
         spinnerThree.setAdapter(adapter)
 
+        //Button which onClick select actuall string in spinners.
         buttonGraph.setOnClickListener(View.OnClickListener {
+            //Condition if in some spinner is empty choose, then you see toast error.
             if (spinnerOne.getSelectedItem().toString() == "-Zvolte zemi-" || spinnerTwo.getSelectedItem().toString() == "-Zvolte zemi-" || spinnerThree.getSelectedItem().toString() == "-Zvolte zemi-") {
                 Toast.makeText(
                     applicationContext,
@@ -80,6 +97,7 @@ class ForeignersGrowthGraph : AppCompatActivity() {
                 ).show()
                 return@OnClickListener
             }
+            //Condition if in some spinner are same strings, then you see errot to choose another coutry.
             if (spinnerOne.getSelectedItem().toString() == spinnerTwo.getSelectedItem().toString() || spinnerTwo.getSelectedItem().toString() == spinnerThree.getSelectedItem().toString() || spinnerOne.getSelectedItem().toString() == spinnerThree.getSelectedItem().toString()) {
                 Toast.makeText(
                     applicationContext,
@@ -89,6 +107,7 @@ class ForeignersGrowthGraph : AppCompatActivity() {
                 return@OnClickListener
             }
 
+            //Set invisible some of components
             spinnerOne.setVisibility(View.INVISIBLE)
             spinnerTwo.setVisibility(View.INVISIBLE)
             spinnerThree.setVisibility(View.INVISIBLE)
@@ -97,18 +116,23 @@ class ForeignersGrowthGraph : AppCompatActivity() {
             textForNext.setVisibility(View.INVISIBLE)
             graph.setVisibility(View.VISIBLE)
 
+            //Initialization components of graph series to which will be load data which will be point in graph.
             val series1 = BarGraphSeries<DataPoint>()
             val tmpArrListFor = ArrayList<String>()
+            //Initializate helping array list.
             val tmpArrStaticLabel = ArrayList<String>()
 
+            //Take string which are actually in spinner.
             tmpArrListFor.add(spinnerOne.getSelectedItem().toString())
             tmpArrListFor.add(spinnerTwo.getSelectedItem().toString())
             tmpArrListFor.add(spinnerThree.getSelectedItem().toString())
             var tmp = 1.0
 
+            //For loop which iterate every object in HashMap and add attributes of object to graph series.
             for ((key, value) in readerAndMaps.hashItemForeignersGrowth) {
 
 
+                //adding attributes to series if are equal to strings which was choose in spinners.
                 if (tmpArrListFor[0] == value.country) {
                     val x = tmp
                     val y = value.countForeigners?.toDouble()!!
@@ -116,6 +140,7 @@ class ForeignersGrowthGraph : AppCompatActivity() {
                     tmpArrStaticLabel.add(tmpArrListFor[0])
                     tmp++
                 }
+                //adding attributes to series if are equal to strings which was choose in spinners.
                 if (tmpArrListFor[1] == value.country) {
                     val x = tmp
                     val y = value.countForeigners?.toDouble()!!
@@ -124,6 +149,7 @@ class ForeignersGrowthGraph : AppCompatActivity() {
                     tmp++
 
                 }
+                //adding attributes to series if are equal to strings which was choose in spinners.
                 if (tmpArrListFor[2] == value.country) {
                     val x = tmp
                     val y = value.countForeigners?.toDouble()!!
@@ -132,6 +158,7 @@ class ForeignersGrowthGraph : AppCompatActivity() {
                     tmp++
                 }
 
+                //Set color properties of added point.
                 series1.setValueDependentColor(ValueDependentColor<DataPoint> { data ->
                     Color.rgb(
                         data.x.toInt() * 255 / 4,
@@ -143,16 +170,20 @@ class ForeignersGrowthGraph : AppCompatActivity() {
 
             }
 
+            //Create array list which will contain static label strings.
             val tmpArr = tmpArrStaticLabel.toArray(arrayOfNulls<String>(tmpArrStaticLabel.size))
 
             val staticLabelsFormatter = StaticLabelsFormatter(graph)
+            //Creating static labels for graph.
             staticLabelsFormatter.setHorizontalLabels(tmpArr)
 
+            //Setting label properties.
             graph.gridLabelRenderer.labelFormatter = staticLabelsFormatter
-
+            //Setting series of point properties.
             series1.setSpacing(20);
             series1.setDrawValuesOnTop(true)
             series1.setValuesOnTopColor(Color.RED)
+            //Add series to graph.
             graph.addSeries(series1)
 
 

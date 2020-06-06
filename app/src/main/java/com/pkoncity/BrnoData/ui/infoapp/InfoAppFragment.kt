@@ -19,7 +19,7 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Foobar is distributed in the hope that it will be useful,
+Brno v Datech is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -29,6 +29,11 @@ along with Brno v Datech.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 class InfoAppFragment : Fragment() {
+
+    /**
+    This fragment manage components for example as buttons and textviews which are showed in info app section.
+     */
+
 
     private lateinit var sendViewModel: InfoAppViewModel
 
@@ -42,7 +47,9 @@ class InfoAppFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_infoapp, container, false)
 
 
+        //Initialization of button which will open new email to author.
         val buttonAboutMe = root.findViewById(R.id.buttonAboutMe) as Button
+        //SetOnClick lister for open new email to author.
         buttonAboutMe.setOnClickListener(View.OnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             val data =
@@ -51,13 +58,18 @@ class InfoAppFragment : Fragment() {
             startActivity(intent)
         })
 
+        //Initialization of button which will open website where is more info about used open source library.
         val buttonGraphView = root.findViewById(R.id.buttonGraphView) as Button
+        //SetOnClick lister for open website with more info about used open source library.
         buttonGraphView.setOnClickListener(View.OnClickListener {
             val uri: Uri = Uri.parse("https://github.com/jjoe64/graphview")
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
         })
+
+        //Initialization of button which will open website where is more info about app.
         val buttonGitHub = root.findViewById(R.id.buttonGitHub) as Button
+        //SetOnClick lister for open website with more info about app.
         buttonGitHub.setOnClickListener(View.OnClickListener {
             val uri: Uri = Uri.parse("https://github.com/Koncpa/DataBrno/blob/master/COPYING.txt")
             val intent = Intent(Intent.ACTION_VIEW, uri)

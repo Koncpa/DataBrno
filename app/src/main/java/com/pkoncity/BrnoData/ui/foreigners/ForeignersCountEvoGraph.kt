@@ -20,7 +20,7 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Foobar is distributed in the hope that it will be useful,
+Brno v Datech is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -34,31 +34,45 @@ Library is available under the Apache 2.0 license, which can be obtained from ht
 
 class ForeignersCountEvoGraph : AppCompatActivity() {
 
+    /**
+    This activity use data from .csv file and create Foreigners count evolution graph.
+     */
+
+    //Initialization of readerAndMap class which load data from .csv files.
     private val readerAndMaps = ReaderAndMaps()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_foreigners_count_evo_graph)
 
+        //Initialization component of graph which is from open source library GraphView.
         val graph = findViewById<View>(R.id.graphForEvo) as GraphView
 
+        //Load specific data set to HashMap from .csv file.
         readerAndMaps.foreignersEvolutionReader(resources)
 
+        //Set manual maximum and minimum of axis Y.
         graph.getViewport().setYAxisBoundsManual(true);
         graph.getViewport().setMinY(3000.0);
         graph.getViewport().setMaxY(33000.0);
 
+        //Initialization components of graph series to which will be load data which will be point in graph.
         val series1 = LineGraphSeries<DataPoint>()
         val series2 = LineGraphSeries<DataPoint>()
 
         var x = 1
+        //For loop which iterate every object in HashMap and add attributes of object to graph series.
         for ((key, value) in readerAndMaps.hashItemForeignersEvolution) {
 
+            //Adding attributes of object to tmp variables.
             val y = value.countForeignersCity!!.toDouble()
             val z = value.countForeignersCountryside!!.toDouble()
 
+            //Condition how many point we can add to attributes
             if (value.year?.contains("12/")!! || value.year?.contains("6/2019")!!) {
+                //Saving attribute of year from object to tmp array list.
                 readerAndMaps.tmpArrList.add(value.year.toString())
+                //Add tmp variables to graph series.
                 series1.appendData(DataPoint(x.toDouble(), y), true, 20)
                 series1.setDrawDataPoints(true)
                 series2.appendData(DataPoint(x.toDouble(), z), true, 20)
@@ -69,25 +83,29 @@ class ForeignersCountEvoGraph : AppCompatActivity() {
 
         }
 
+        //Create array list which will contain static label strings.
         val tmpArr =
             readerAndMaps.tmpArrList.toArray(arrayOfNulls<String>(readerAndMaps.tmpArrList.size))
 
         val staticLabelsFormatter = StaticLabelsFormatter(graph)
+        //Creating static labels for graph.
         staticLabelsFormatter.setHorizontalLabels(tmpArr)
 
+        //Setting label properties.
         graph.gridLabelRenderer.labelFormatter = staticLabelsFormatter
         graph.getLegendRenderer().setVisible(true)
         graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.MIDDLE)
         graph.gridLabelRenderer.setHorizontalAxisTitle("Vývoj počtu cizinců");
 
+        //Setting series of point properties.
         series1.setTitle("Brno - město")
         series1.setColor(Color.BLUE)
         series1.setThickness(8)
-
         series2.setTitle("Brno - venkov")
         series2.setColor(Color.RED)
         series2.setThickness(8)
 
+        //Add series to graph.
         graph.addSeries(series1)
         graph.addSeries(series2)
     }

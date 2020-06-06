@@ -35,6 +35,8 @@
     <string name="allGrowth">Hrubá míra celkového přírůstku</string>
     <string name="hrubaPorodnostTable">Hrubá míra porodnosti</string>
     <string name="hrubaUmrtnostTable">Hrubá míra úmrtnosti</string>
+    <string name="birthnessDescr">Tato sekce zobrazuje datové sady ve formě grafů a tabulek související s populačním vývojem ve městě Brně od roku 2001 do roku 2017.</string>
+
 
     <string name="foreignersGeneral">Tato sekce se věnuje tématu přistehovalectví. Zobrazuje například počty cizinců dle národnosti nebo přírůstek cizinců v posledních letech v okrese Brno-město či Brno-venkov. Data pochází z let 2011 až 2018.</string>
     <string name="foreignersCount">Počet cizinců </string>

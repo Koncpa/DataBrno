@@ -18,7 +18,7 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Foobar is distributed in the hope that it will be useful,
+Brno v Datech is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -28,6 +28,11 @@ along with Brno v Datech.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 class QuizFragment : Fragment() {
+
+    /**
+    This fragment manage components for example as buttons and textviews which are showed in quizsection.
+     */
+
 
     private lateinit var sendViewModel: QuizViewModel
 
@@ -42,7 +47,9 @@ class QuizFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_quiz, container, false)
 
 
+        //Initialization of button which will be start new activity of quiz.
         val startbutton = root.findViewById(R.id.buttonquiz) as Button
+        //SetOnClick lister for start new activity of quiz.
         startbutton.setOnClickListener {
             activity?.let {
                 val intent = Intent(this.context, QuestionsActivity::class.java)
@@ -53,8 +60,11 @@ class QuizFragment : Fragment() {
 
         }
 
-        val treebutton = root.findViewById(R.id.buttonInfoQuiz) as Button
-        treebutton.setOnClickListener {
+
+        //Initialization of button which will be start new activity info about quiz.
+        val infoButton = root.findViewById(R.id.buttonInfoQuiz) as Button
+        //SetOnClick lister for start new activity of info about quiz.
+        infoButton.setOnClickListener {
             activity?.let {
                 val intent = Intent(this.context, QuizInfo::class.java)
                 startActivity(intent)

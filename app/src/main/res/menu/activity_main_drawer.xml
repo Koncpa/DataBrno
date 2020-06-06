@@ -24,7 +24,7 @@
             android:icon="@drawable/ic_age"
             android:title="@string/menu_age_structure" />
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/nav_foreigners"
             android:icon="@drawable/ic_foreigners"
             android:title="@string/menu_foreigners" />
         <item
@@ -36,7 +36,7 @@
     <item android:title="Další údaje">
         <menu>
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_info"
                 android:icon="@drawable/ic_info"
                 android:title="@string/menu_appinfo" />
         </menu>

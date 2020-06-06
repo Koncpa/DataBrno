@@ -18,7 +18,7 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Foobar is distributed in the hope that it will be useful,
+Brno v Datech is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
@@ -28,6 +28,10 @@ along with Brno v Datech.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 class GeneralFragment : Fragment() {
+
+    /**
+    This fragment manage components for example as buttons and textviews which are showed in home section.
+     */
 
     private lateinit var homeViewModel: GeneralViewModel
 
@@ -40,7 +44,10 @@ class GeneralFragment : Fragment() {
             ViewModelProviders.of(this).get(GeneralViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_general, container, false)
 
+
+        //Initialization of button which start new activity which will be show info about specific data sets which are used in app .
         val buttonOpenDataUrl = root.findViewById<Button>(R.id.button_general_info_data_url)
+        //SetOnClick lister for starting new activity with info about data sets.
         buttonOpenDataUrl.setOnClickListener {
             activity?.let {
                 val intent = Intent(this.context, OpenDataUrl::class.java)
@@ -51,7 +58,9 @@ class GeneralFragment : Fragment() {
 
         }
 
+        //Initialization of button which start new activity which will be show info about open data .
         val buttonOpenDataInfo = root.findViewById<Button>(R.id.button_general_info_data)
+        //SetOnClick lister for starting new activity with info about open data.
         buttonOpenDataInfo.setOnClickListener {
             activity?.let {
                 val intent = Intent(this.context, OpenDataInfo::class.java)
